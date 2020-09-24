@@ -52,6 +52,7 @@ namespace Final.Controllers
             return Created(url, post);
             
         }
+        //Get Specific Comment
 
         [Route("{id1}/comments/{id2}", Name = "GetCommentById")]
         public IHttpActionResult Get(int id1, int id2)

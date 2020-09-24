@@ -19,5 +19,7 @@ namespace Final.Models
         public IEnumerable<Course> Courses { get; set; }
         public IEnumerable<Post> Posts { get; set; }
 
+        public Cart Cart { set; get; }
+
     }
 }
