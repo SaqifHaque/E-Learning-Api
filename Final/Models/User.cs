@@ -18,8 +18,10 @@ namespace Final.Models
 
         public IEnumerable<Course> Courses { get; set; }
         public IEnumerable<Post> Posts { get; set; }
+        //public IEnumerable<Enroll> Enrolls { get; set; }
+        public IEnumerable<Invoice> Invoices { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
 
-        public Cart Cart { set; get; }
 
     }
 }

@@ -11,15 +11,19 @@ namespace Final.Models
     {
         [Key]
         public int PostId { get; set; }
+        [Required]
 
         public string PostDetails { get; set; }
 
         public List<HyperLink> HyperLinks = new List<HyperLink>();
+        [Required]
 
         public int UserId { set; get; }
+        [Required]
 
         [ForeignKey("UserId")]
         public User User { set; get; }
+        [Required]
 
         public IEnumerable<Comment> Comments { get; set; }
 

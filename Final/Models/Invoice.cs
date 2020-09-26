@@ -7,23 +7,19 @@ using System.Web;
 
 namespace Final.Models
 {
-    public class Comment
+    public class Invoice
     {
         [Key]
-        public int CommentId { get; set; }
+        public int Invoice_Id { get; set; }
         [Required]
-
-        public string CommentDetails { get; set; }
+        public int Student_Id { get; set; }
         [Required]
-
-        public string Uname { get; set; }
+        public string Items { get; set; }
         [Required]
-
-        public int PostId { get; set; }
-        [ForeignKey("PostId")]
-        public Post Post { get; set; }
+        public double Price { get; set; }
+        [ForeignKey("Student_Id")]
+        public User User { get; set; }
         public List<HyperLink> HyperLinks = new List<HyperLink>();
-
-
     }
+
 }

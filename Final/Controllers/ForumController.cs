@@ -17,8 +17,8 @@ namespace Final.Controllers
         CommentRepository comRepo = new CommentRepository();
         UserRepository uRepo = new UserRepository();
         
-        //[BasicAuthorization]
-        //[MyAuthorize(Roles = "Student,Teacher")]
+        [BasicAuthorization]
+        [MyAuthorize(Roles = "Admin,Student,Teacher")]
         [Route("")]
         public IHttpActionResult Get()
         {
@@ -30,7 +30,8 @@ namespace Final.Controllers
             }
             return Ok(p);
         }
-
+        [BasicAuthorization]
+        [MyAuthorize(Roles = "Admin,Student,Teacher")]
         [Route("{id}",Name ="GetPostById")]
         public IHttpActionResult Get(int id)
         {
@@ -42,7 +43,8 @@ namespace Final.Controllers
             return Ok(p);
 
         }
-
+        [BasicAuthorization]
+        [MyAuthorize(Roles = "Admin,Student,Teacher")]
         //Post Done
         [Route("")]
         public IHttpActionResult Post(Post post)
@@ -53,7 +55,8 @@ namespace Final.Controllers
             
         }
         //Get Specific Comment
-
+        [BasicAuthorization]
+        [MyAuthorize(Roles = "Admin,Student,Teacher")]
         [Route("{id1}/comments/{id2}", Name = "GetCommentById")]
         public IHttpActionResult Get(int id1, int id2)
         {

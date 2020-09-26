@@ -107,10 +107,19 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\BasicAuthorizationAttribute.cs" />
     <Compile Include="Authentication\MyAuthorizeAttribute.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\EnrollController.cs" />
+    <Compile Include="Controllers\FinancialController.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\NoticeController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -118,21 +127,37 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Content.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Enroll.cs" />
     <Compile Include="Models\FinalDataContext.cs" />
+    <Compile Include="Models\Financial.cs" />
     <Compile Include="Models\HyperLink.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Notice.cs" />
+    <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\CommentRepository.cs" />
+    <Compile Include="Repository\ContentRepository.cs" />
     <Compile Include="Repository\CourseRepository.cs" />
+    <Compile Include="Repository\EnrollRepository.cs" />
+    <Compile Include="Repository\FinancialRepository.cs" />
     <Compile Include="Repository\ICourseRepository.cs" />
+    <Compile Include="Repository\InvoiceRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\NoticeRepository.cs" />
+    <Compile Include="Repository\NotificationRepository.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\StatusRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\VideoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

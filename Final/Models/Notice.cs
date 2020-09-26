@@ -7,17 +7,14 @@ using System.Web;
 
 namespace Final.Models
 {
-    public class Cart
+    public class Notice
     {
         [Key]
-        public int Cart_Id { get; set; }
-        [Required]
-        public int Student_Id { get; set; }
-        [Required]
-        public int Item_Id { get; set; }
-        [ForeignKey("Item_Id")]
+        public int Notice_Id { get; set; }
+        public int Course_Id { get; set; }
+        public string Notice_Details { get; set; }
+        [ForeignKey("Course_Id")]
         public Course Course { get; set; }
         public List<HyperLink> HyperLinks = new List<HyperLink>();
-
     }
 }

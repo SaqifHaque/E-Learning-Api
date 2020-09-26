@@ -10,8 +10,10 @@ namespace Final.Models
     {
         [Key]
         public int Category_Id { get; set; }
+        [Required]
         public string Category_Name { get; set; }
         public IEnumerable<Course> Courses { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
 
     }
 }

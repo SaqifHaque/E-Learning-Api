@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace Final.Models
 {
-    public class Cart
+    public class Financial
     {
         [Key]
-        public int Cart_Id { get; set; }
+        public int F_Id { get; set; }
         [Required]
-        public int Student_Id { get; set; }
+        public string Courses { get; set; }
         [Required]
-        public int Item_Id { get; set; }
-        [ForeignKey("Item_Id")]
-        public Course Course { get; set; }
+        public int Paid_By { get; set; }
+        [Required]
+        public int Amount { get; set; }
+        [Required]
+        public double Profit { get; set; }
         public List<HyperLink> HyperLinks = new List<HyperLink>();
 
     }

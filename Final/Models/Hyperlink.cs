@@ -10,5 +10,6 @@ namespace Final.Models
         public string HRef { get; set; }
         public string HttpMethod { get; set; }
         public string Relation { get; set; }
+        public List<HyperLink> HyperLinks = new List<HyperLink>();
     }
 }
